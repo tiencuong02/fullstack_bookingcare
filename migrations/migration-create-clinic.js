@@ -1,4 +1,7 @@
 'use strict';
+
+const { name } = require("ejs");
+
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable('clinics', {
@@ -11,8 +14,11 @@ module.exports = {
       address: {
         type: Sequelize.STRING
       },
+      name: {
+        type: Sequelize.STRING
+      },
       description: {
-        type: Sequelize.INTEGER
+        type: Sequelize.TEXT
       },
       image: {
         type: Sequelize.INTEGER
