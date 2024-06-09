@@ -24,7 +24,7 @@ let getCRUD = (req, res) => {
 let postCRUD = async(req, res)  =>{
     let message = await CRUDService.createNewUser(req.body);
     console.log(message)
-    return res.send('post crud from server');
+    return res.send('displayCRUD.ejs');
 }
 
 let displayGetCRUD = async (req, res) => {
@@ -32,6 +32,7 @@ let displayGetCRUD = async (req, res) => {
     console.log('------------------')
     console.log(data);
     console.log('------------------')
+
     return res.send("display get crud from controller");
 } 
 module.exports = {
